@@ -78,8 +78,9 @@ __starts with ! (exclamation mark)__
 
 USERBOT_REPO = f"""{emoji.ROBOT} **Telegram Voice Chat UserBot**
 
-- Repository: [GitHub](https://github.com/callsmusic/tgvc-userbot)
-- License: AGPL-3.0-or-later"""
+- Credit: [tgvc](https://github.com/callsmusic/tgvc-userbot)
+- ?: AGPL-3.0-or-late
+- Note: [Dimas](http://t.me/xkull7) Gans"""
 
 # - Pyrogram filters
 
@@ -151,9 +152,9 @@ mp = MusicPlayer()
 async def network_status_changed_handler(context, is_connected: bool):
     if is_connected:
         mp.chat_id = MAX_CHANNEL_ID - context.full_chat.id
-        await send_text(f"{emoji.CHECK_MARK_BUTTON} joined the voice chat")
+        await send_text(f"{emoji.CHECK_MARK_BUTTON} Oke Dek Gue Udah Naik")
     else:
-        await send_text(f"{emoji.CROSS_MARK_BUTTON} left the voice chat")
+        await send_text(f"{emoji.CROSS_MARK_BUTTON} Oke Dek Gue Dah Turun")
         mp.chat_id = None
 
 
@@ -207,7 +208,7 @@ async def play_track(client, m: Message):
     playlist.append(m_audio)
     if len(playlist) == 1:
         m_status = await m.reply_text(
-            f"{emoji.INBOX_TRAY} downloading and transcoding..."
+            f"{emoji.INBOX_TRAY} downloading... sbr jing"
         )
         await download_audio(playlist[0])
         group_call.input_filename = os.path.join(
